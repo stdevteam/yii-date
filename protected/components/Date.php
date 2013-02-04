@@ -31,12 +31,12 @@ class Date extends CComponent{
      * @param bool $local Weather or not to return date time in local timezone or not, defaults to true
      * @return string The database compatible date time
      */
-    public function now($local = true){
+    public function now($local = true,$format = "Y-m-d H:i:s"){
         $time = time();
         if($local){
          $time += ($this->offset * 3600);
         }
-        return gmdate("Y-m-d H:i:s", $time);
+        return gmdate($format , $time);
     }
     /**
      * Method to format datetime string or timestamp passed to $date into database compatible representation
