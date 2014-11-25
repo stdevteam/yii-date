@@ -34,7 +34,7 @@ class Date extends CComponent{
     public function now($local = true){
         $time = time();
         if($local){
-         $time += ($this->offset * 3600);
+         $time += (($this->offset + date("I", $time)) * 3600);
         }
         return gmdate("Y-m-d H:i:s", $time);
     }
@@ -54,7 +54,7 @@ class Date extends CComponent{
             $date = strtotime($date);
         }
         if($local){
-            $date = $date + ($this->offset * 3600);
+            $date = $date + (($this->offset + date("I", $date)) * 3600);
         }
 
         return gmdate("Y-m-d H:i:s", $date);
@@ -67,7 +67,7 @@ class Date extends CComponent{
     public function timestamp($local = true){
         $stamp = time();
         if($local){
-            $stamp += ($this->offset * 3600);
+            $stamp += (($this->offset + date("I", $stamp))* 3600);
         }
         return $stamp;
     }
@@ -104,7 +104,7 @@ class Date extends CComponent{
         }
 
         if($local){
-            $date = $date + ($this->offset * 3600);
+            $date = $date + (($this->offset + date("I", $date)) * 3600);
         }
 
         return gmdate("Y-m-d", $date);
