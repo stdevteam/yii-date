@@ -9,7 +9,7 @@ class DateController extends Controller
 	 */
 	public function actionIndex(){
 		//a sample date
-		$date = '24-01-2013';
+		$date = '24-01-2022';
 	
 		//Returns current datetime formatted for MySQL with the timezone offset applied to it
 		echo Yii::app()->Date->now();
@@ -41,7 +41,7 @@ class DateController extends Controller
 		
 		
 		//Given start and end dates in almost any format claculates the number of days within the interval
-		echo Yii::app()->Date->daysCount('10-02-2013', '24-01-2013');
+		echo Yii::app()->Date->daysCount('10-02-2022', '24-01-2022');
 		
 		
 		//Given a year or a date string returns the number of days that the year contains (365 or 366)
