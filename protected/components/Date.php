@@ -5,10 +5,10 @@
  * https://github.com/stdevteam/yii-date
  *
  * @author STDev <yii@st-dev.com>
- * @copyright 2013 STDev http://st-dev.com
+ * @copyright 2022 STDev http://st-dev.com
  * @license released under dual license BSD License and MIT License
  * @package Date
- * @version 1.0
+ * @version 1.1
  */
 class Date extends CComponent{
     /**
